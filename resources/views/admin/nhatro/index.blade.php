@@ -46,9 +46,7 @@
                                             <th>Floor</th>
                                             <th>Room</th>
                                             <th>Room in Floor</th>
-                                            <th>Address</th>
                                             <th>Status</th>
-                                            <th>Description</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -63,18 +61,15 @@
                                                 <td>{{ $nhatro->n_floor }} tầng</td>
                                                 <td>{{ $nhatro->n_room }} phòng</td>
                                                 <td>{{ $nhatro->room_in_floor }} phòng</td>
-                                                <td>{{ $nhatro->address }}</td>
                                                 <td>{{ $nhatro->status }}</td>
-                                                <td>{{ $nhatro->description }}</td>
                                                 <td>
-                                                    {{-- <form action="{{ route('delete_nhatro', $nhatro->id) }}"
-                                                        method="post">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit"><i class="fas fa-trash"></i></button>
-                                                    </form> --}}
-                                                    <a href="#" class="btn btn-outline-primary" data-toggle="modal"
-                                                        data-target="#exampleModal">Add New</a>
+                                                    <a class="mr-2 ml-2" href="#" data-toggle="modal"
+                                                        data-target="#exampleModal_detail"><i class="fas fa-eye"></i></a>
+                                                    <a class="mr-2 ml-2" href="#" data-toggle="modal"
+                                                        data-target="#exampleModal_edit"><i
+                                                            class="fas fa-pencil-alt"></i></a>
+                                                    <a class="mr-2 ml-2" href="#" data-toggle="modal"
+                                                        data-target="#exampleModal_delete"><i class="fas fa-trash"></i></a>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -89,6 +84,9 @@
                 <!-- ============================================================== -->
             </div>
             @include('admin.nhatro.create')
+            @include('admin.nhatro.show')
+            @include('admin.nhatro.edit')
+            @include('admin.nhatro.delete')
         </div>
     </div>
 @endsection

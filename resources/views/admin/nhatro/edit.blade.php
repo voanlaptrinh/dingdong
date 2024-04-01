@@ -1,49 +1,27 @@
-@foreach ($nhatros as $nhatro)
-    <div class="row">
-        <!-- ============================================================== -->
-        <!-- modal  -->
-        <!-- ============================================================== -->
-        <div class="modal fade" id="exampleModal_detail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document" style="max-width: 1200px;">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Details {{ $nhatro->name }}</h5>
-                        <a href="#" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </a>
-                    </div>
-                    <div class="row">
-                        <!-- ============================================================== -->
-                        <!-- validation form -->
-                        <!-- ============================================================== -->
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <div class="card" style="margin-bottom: 0px;">
-                                <div class="card-body">
-                                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img class="d-block w-100" src="/assets/images/card-img-1.jpg"
-                                                    alt="First slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block w-100" src="/assets/images/card-img-2.jpg"
-                                                    alt="Second slide">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block w-100" src="/assets/images/card-img-3.jpg"
-                                                    alt="Third slide">
-                                            </div>
-                                        </div>
-                                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
-                                            data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span> </a>
-                                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
-                                            data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span> </a>
-                                    </div>
+<div class="row">
+    <!-- ============================================================== -->
+    <!-- modal  -->
+    <!-- ============================================================== -->
+    <div class="modal fade" id="exampleModal_edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+                    <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </a>
+                </div>
+                <div class="row">
+                    <!-- ============================================================== -->
+                    <!-- validation form -->
+                    <!-- ============================================================== -->
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="card" style="margin-bottom: 0px;">
+                            <div class="card-body">
+                                <form action="{{ route('add_nhatro') }}" method="post" class="needs-validation"
+                                    novalidate>
+                                    @csrf
                                     <div class="row">
                                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mb-2 ">
                                             <label for="validationCustom01">Name</label>
@@ -104,20 +82,23 @@
                                         <button class="btn btn-secondary" type="button" data-dismiss="modal"
                                             style="color: #000; font-weight: bold;">Close
                                         </button>
+                                        <button class="btn btn-primary" type="submit"
+                                            style="color: #000; font-weight: bold;">Save
+                                        </button>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
-                        <!-- ============================================================== -->
-                        <!-- end validation form -->
-                        <!-- ============================================================== -->
                     </div>
-
+                    <!-- ============================================================== -->
+                    <!-- end validation form -->
+                    <!-- ============================================================== -->
                 </div>
+
             </div>
         </div>
-        <!-- ============================================================== -->
-        <!-- modal  -->
-        <!-- ============================================================== -->
     </div>
-@endforeach
+    <!-- ============================================================== -->
+    <!-- modal  -->
+    <!-- ============================================================== -->
+</div>

@@ -107,7 +107,6 @@
     <script src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
     <script src="https://cdn.datatables.net/fixedheader/3.1.5/js/dataTables.fixedHeader.min.js"></script>
 
-
     <script src="/assets/vendor/parsley/parsley.js"></script>
     <script>
         $('#form').parsley();
@@ -132,6 +131,8 @@
             }, false);
         })();
     </script>
+
+
 </body>
 
 </html>
